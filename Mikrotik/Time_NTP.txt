@@ -1,0 +1,18 @@
+# Ajustando data e hora utilizando protocolo NTP
+	Menu: System -> SNTP Client
+	Steps:
+		* Necessário escolher dois servidores para sincronização 
+		* Site para servidores no Brasil: ntp.br
+		* Preencher campos:
+			- Marcar a caixa [Enabled]
+			- Primary NTP Server (adicionar o endereço do servidor primário)
+			- Secondary NTP Server (adicionar o endereço do servidor secundário)
+			- Botão [Apply]
+			- OK
+			
+	Menu: System -> Clock
+	Steps:
+		* Para funcionar de fato, precisa-se trocar o fusorário para a localidade preferida
+		* Escolher a localidade em "Time Zone Name" e clicar em "Apply"
+		
+	
