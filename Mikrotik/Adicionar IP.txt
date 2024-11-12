@@ -1,0 +1,29 @@
+# Adicionando um IP via cli
+	/ip address> add interface=<id da interface> address=<ip/cdir>
+	/ip address> print (visualizar o ip atribuido)
+
+# Adicionando um gateway via cli
+	/ip route> add gateway=<IP>
+	.. (usar para retornar para o diretório anterior)
+	> ping <endereço> (testar se a rota estar funcionando)
+	
+# Adicionando um IP via winbox
+	*menu
+		IP -> Address
+	*campos
+		botão +
+		Address: Ip a ser adicionado
+		Network: Rede (Se não colocado, completa automaticamente)
+		Interface: Id da interface
+		botão OK
+		
+# Adicionando um gateway via winbox
+	*menu
+		IP -> Route
+	*campos
+		botão +
+		Dst. Address: destino da rede (padrão 0.0.0.0/0)
+		Gateway: Ip que será usado com gateway
+		botão apply
+		botão OK
+	
