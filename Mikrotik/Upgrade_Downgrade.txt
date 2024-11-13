@@ -1,0 +1,32 @@
+# Atualizando o Mikrotik via winbox
+	* Menu: System -> Packages (Exibi todos os pacotes habilitados)
+	* Em alguns casos não se faz necessário a utilização de um pacote, nesse caso é melhor desabilitá-lo
+	* Para desabilitar um pacote:
+		- Clique no pacote e em seguida no botão da barra superior [Disable]
+	* Antes de realizarmos a atualização precisamos adicionar um DNS:
+		- Menu: IP -> DNS
+		- Server: Adicionar o endereço do servidor DNS
+		- Botão [Apply]
+		- OK
+	* Depois de escolher os pacotes a serem utilizados e configurar um DNS podemos atualizar:
+		- Botão [Check For Updates] na barra superior
+		- Botão [Check For Updates] na lateral
+		- Channel: escolher entre verões: estable; long term; development; testing
+		- Botão [Download&Install] na lateral
+	* Caso escolha um arquivo para atualizar é necessário realizar um Downgrade
+		- Menu: Files
+		- Arraste o arquivo de atualização para a área de arquivos do mikrotik
+		- Arraste de Files para Menu: System -> Packages
+		- Ele começará a fazer o download automaticamente (espera ele terminar)
+		- Clique em [Downgrade] na barra superior
+	* Se for necessário habilitar um pacote:
+		- Clique no pacote desabilitado e em seguida no botão da barra superior [Enable]
+		- Menu: System -> Reboot (Para rebootar o sistema)
+		- [Yes]
+
+# Para colocar um nome no Mikrotik
+	* Menu: System -> Identify
+	* Para trocar o nome padrão:
+		- Identify: digite o nome da sua preferência
+		- [Apply]
+		- OK

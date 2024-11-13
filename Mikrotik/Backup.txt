@@ -1,0 +1,11 @@
+# Criar um arquivo de backup via winbox
+	* Menu: Files
+	* O arquivo criado em um modelo tem que ser usado em outro mikrotik do mesmo modelo
+	* Para fazer um backup:
+		- Clique em [Backup] na barra superior
+		- Name: digite o nome do arquivo
+		- Clique em [Backup] no menu lateral
+		
+# Criar um arquivo de backup via CLI 
+	* Comando: export file=bkp_full
+	
