@@ -1,0 +1,20 @@
+# Criação de um backup automático via winbox
+	* Primeiramente se faz necessário a criação do script que fará o backup:
+		- Menu: System -> Scripts
+		- Ícone [+]
+		- campo Name: digitar o nome do script
+		- campo Source: digite o comando a ser rodado
+		- export file=<nome do backup> (comando a ser usado no Source)
+		- botão lateral [Apply]
+		- OK
+		- Para verificar o funcionamento do script: clique no script e em seguida em [Run Script]
+	* Agora precisamos agendar a execução do script
+		- Menu: System -> Scheduler
+		- Ícone [+]
+		- campo Name: digite nome da agenda
+		- Start Date: data que começará a execução MM/DD/AAAA
+		- Start Time: horário que começará a execução HH:MM:SS
+		- Interval: intervalo de execução do script HH:MM:SS
+		- On Event: digite o nome do script que foi criado
+		- botão [Apply]
+		- OK

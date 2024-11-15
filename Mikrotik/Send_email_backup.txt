@@ -1,0 +1,29 @@
+# Como enviar automaticamente o backup por e-mail
+	* Primeiramente precisamos configurar um servidor de email
+		- Menu: Tools -> Email
+		- campo Server: digite endereço do servidor (smtp-mail.outlook.com/52.97.0.230)
+		- campo Port: digite a porta utilizada pelo servidor (587)
+		- Start TLS: protocolo de segurança (recomendado colocar "yes")
+		- campo From: digite o seu endereço de email (site para criar um email https://outlook.live.com/owa/)
+		- campo User: digite o seu endereço de email
+		- Password: digite sua senha de email
+		- botão [Apply]
+		- Ok
+	* Agora precisamos criar um script que enviará o email
+		- Menu: System -> Scripts
+		- Ícone [+]
+		- campo Name: digite o nome do script
+		- campo Source:
+			tool e-mail send
+			to:<endereço de e-mail, o qual, receberá o arquivo de backup>
+			subject<assunto do email> body=<corpo do email>
+			file=<nome do arquivo com a extensão>
+		- Ok
+		- Obs: não esqueça de permitir que aplicativos de terceiros façam login na sua conta google
+	* Crie uma nova agenda para esse script de enviar e-mail:
+		- Menu: System -> Scheduler
+		- Name: nome da egenda
+		- Start Date: data de ínicio
+		- Start Time: horário inicial
+		- Interval: intervalo de tempo
+		- On Event: nome do script
