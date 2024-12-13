@@ -1,0 +1,41 @@
+# Receber um IP via DHCP Client
+	* menu: IP -> DHCP Client
+		- Ícone [+]
+		- Campo: Interface (escolher a interface que ira receber do servidor)
+		- OK
+		- Clica uma vez em cima do objeto criado
+		- Clica no ícone de visto na barra acima (necessário para ativar o dhcp client)
+		
+# Criar um DHCP Server para Fornecer Ips para outros Equipamentos
+	* Primeiramente se faz necessário a criação de um gateway
+		- Menu: IP -> Addresses
+		- Ícone [+]
+		- Campo [Interface] (escolher a porta em que será conectado o equipamento client)
+		- Campo [Address] (adicionar o IP de saída)
+		- Botão [Apply]
+		- Ok
+	* Ademais deve-se criar o DHCP Server na interface escolhida
+		- Menu: IP -> DHCP Server
+		- Botão [DHCP Setup]
+		- Campo: [DHCP Server Interface] (escolher a interface)
+		- Botão [Next]
+		- Campo: [DHCP Address Space] (Network)
+		- Botão [Next]
+		- Campo: [Gateway for DHCP Network] (escolher o gateway ip)
+		- Botão [Next]
+		- Campo: [Address to Give Out] (Adicionar a faixa de ip usada para fornecer)
+		- Botão [Next]
+		- Campo: [DNS Server]
+		- Botão [Next]
+		- Campo: [Lease Time] (Tempo em que um equipamento ficará com o IP até ser renovado)
+		- Botão [Next]
+		- OK
+
+# Fazendo NAT Entre as redas WAN e LAN
+	* Menu: IP -> Firewall
+		- Na barra superior clicar na opção NAT
+		- Ícone [+]
+		- Na barra superior clicar na opção Action
+		- Campo: [Action] escolher masquerade
+		- OK
+		
