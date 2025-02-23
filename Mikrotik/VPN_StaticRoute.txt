@@ -1,0 +1,56 @@
+# Como criar uma VPN entre dois MK e fazer com que duas máquinas em redes lans distintas se comuniquem 
+	* Primeiramente configurando o MK do servidor
+		- menu: IP -> Pool
+		- ícone [+]
+		- Name (nome da pool) Ex: pool_vpn
+		- Addresses (range de ips) Ex: 10.30.10.2-10.30.10.200
+		- OK
+		- menu: PPP
+		- botão superior [Interface] 
+		- botão superior [PPTP Server]
+		- marcar checkbox Enabled
+		- Apply
+		- OK
+		- botão superior [Profiles]
+		- Name (colocar um nome) Ex: VPN
+		- Local Address (Ip privado) Ex: 10.30.10.1
+		- Remote Address (selecionar a pool criada anteriormente)
+		- Apply
+		- OK
+		- botão superior [Secrets]
+		- Name (nome da secret) Ex: vpn
+		- Password (senha da secret) Ex: vpn
+		- Service (selecione a opção PPTP)
+		- Profile (selecionar o profile criado anteriormente)
+		- Apply
+		- OK
+	
+	* Configurando o MK do lado do cliente
+		- menu: PPP
+		- setinha para baixo no ícone [+]
+		- selecionar a opção PPTP Client
+		- Campo superior [General]
+		- Name (escolha um nome para a conexão) Ex: pptp-MATRIZ
+		- Campo superior [Dial Out]
+		- Connect To (IP público do servidor)
+		- User (usuario escolhido no Secret criado no servidor)
+		- Password (senha escolhida no Secret criado no servidor)
+		- Apply
+		- OK
+		
+	* Depois dessas configurações os dois MKs devem se comunicar, entretanto os dois PCs não se comunicam
+	* Nesse caso, precisamos criar um roteamento estático em cada MK para que o PC se comunique com o servidor e vice versa
+	* Criando uma rota para o servidor no MK cliente
+		- menu: IP -> Routes
+		- ícone [+]
+		- Dist. Address (digite o IP de destino, no caso o Ip da rede do servidor)
+		- Gateway (selecione a conexão PPTP criada)
+		- Apply
+		- OK
+	* Criando uma rota para o cliente no MK servidor
+		- menu: IP -> Routes
+		- ícone [+]
+		- Dist. Address (digite o IP de destino, no caso o Ip da rede do cliente)
+		- Gateway (selecione a conexão PPTP criada)
+		- Apply
+		- OK

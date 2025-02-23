@@ -1,0 +1,12 @@
+# Como criar uma bridge para que duas portas se comuniquem
+	* Primeiramente excluímos todas as configurações de DHCP para que o MK funcione como um switch
+		- menu: BRIDGE
+		- ícone [+]
+		- nome (nome da bridge)
+		- OK
+		- botão na barra superior [Ports]
+		- ícone [+]
+		- campo Interface (escolher uma interface participante da bridge) Ex: ether1
+		- OK
+		- ícone Interface (escolher outra interface participante da bridge) Ex: ether2
+		- OK
