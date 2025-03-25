@@ -1,0 +1,8 @@
+# Limitando a banda para uma determinada máquina conectada no MK
+	* menu: Queues
+		- Name (adicionar um nome para o queue)
+		- Dist. (endereço ip que eu quero limitar banda)
+		- Max Limit: Target Upload/ Target Download (quantidade de banda para upload e download)
+		- Apply 
+		- OK
+		

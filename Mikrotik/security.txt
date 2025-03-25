@@ -1,0 +1,4 @@
+# Medida de segurança ao acessar o MK e ativá-lo com IP público
+	* menu: IP -> Services
+		- selecionar todos os modos de acesso do MK, menos via winbox
+		- clicar no ícone [X] para desativar outras formas de acessar

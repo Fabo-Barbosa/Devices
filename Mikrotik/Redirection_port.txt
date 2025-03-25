@@ -1,0 +1,18 @@
+# Fazendo um redirencionamento de porta de um MK para outro
+	* Para criar o redirencionamento é necessário possuir uma porta e um IP, um par interno e outro externo
+		- menu: IP -> Firewall 
+		- opção superior [NAT]
+		- ícone [+]
+		- opção superior [General]
+		- campo Chain (escolher a opção "dstnat")
+		- campo Dist. Address (endereço ip externo)
+		- campo Dist. Port (porta externa)
+		- opção superior [Action]
+		- campo To Adresses (endereço ip interno)
+		- campo To Ports (porta interna)
+		- Apply
+		- OK
+	* Agora, portanto, quando tentarmos acessar o endereço com a porta externos, seremos redirencionados para o 
+	  endereço e porta internos.
+	
+		

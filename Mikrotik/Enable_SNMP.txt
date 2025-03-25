@@ -1,0 +1,12 @@
+# Habilitar o SNMP para monitoramento via zbbix por exemplo 
+	* menu: IP -> SNMP
+		- marcar campo de checkbox [Enabled]
+		- Contact info (informação sobre você, ex: nome)
+		- Location (informação sobre o local)
+		- botão lateral [Communities]
+		- ícone [+]
+		- campo Name (nome da community)
+		- Addresses (ip do servidor)
+		- Apply
+		- campo Trap Community (esolha a community que você criou)
+		- OK
